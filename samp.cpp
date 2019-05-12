@@ -20,10 +20,10 @@ int main(int argc, char const *agrv[]){
        
         leg2.readFile(string(agrv[11]));
 
-        auto b = leg + leg2;
+        auto b = leg | leg2;
 
         b.writeToFile(string(agrv[8]),b);
-        cout << "tad" << endl;
+        
     }
     return 0;
 }
