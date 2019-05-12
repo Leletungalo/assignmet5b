@@ -17,10 +17,10 @@ namespace NGLLEL001{
     public:
         audio(int sampleRate,int bitCount,int noChanels,std::string inPutFile,std::string secondFile,std::string outPutFile);
         audio operator+(audio rhs);
-        std::vector<int> data_vector;
+        std::vector<uint8_t> data_vector;
         void readFile(std::string fileName);
-        vector<int> getVec();
-        void writeToFile(std::string out,std::vector<int> vec);
+        std::vector<int8_t> getVec();
+        void writeToFile(std::string out,audio vec);
         ~audio();
     };
 }

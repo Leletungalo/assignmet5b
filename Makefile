@@ -7,5 +7,8 @@ audio.o: audio.cpp
 samp.o: samp.cpp
 	g++ -c samp.cpp
 
+run:
+	./samp -r 4400 -b 8 -c 85 -o lele.raw -add sampleinput/siren40sec44100signed8bitmono.raw sampleinput/siren40sec44100signed8bitmono.raw
+
 clean:
 	rm *.o samp

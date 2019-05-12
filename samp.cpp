@@ -17,15 +17,13 @@ int main(int argc, char const *agrv[]){
         NGLLEL001::audio leg2(sampleRate,bitCount,noChanels,string(agrv[10]),string(agrv[11]),string(agrv[8]));
 
         leg.readFile(string(agrv[10]));
+       
         leg2.readFile(string(agrv[11]));
 
         auto b = leg + leg2;
 
-        b.writeToFile(string(agrv[8]),b.data_vector);
+        b.writeToFile(string(agrv[8]),b);
         cout << "tad" << endl;
     }
-    
-
-
     return 0;
 }
